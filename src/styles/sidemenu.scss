@@ -47,3 +47,12 @@
         visibility: hidden;
     }
 }
+
+// アイコンの位置を上下中央揃えに、中身を中央揃えに
+.portal-home-icon, .lms-icon, .task-icon, .online-icon, .course-search-color, .community-search-color, .info-icon, .questionnaire-icon, .notice-icon, .links-icon, .calendar-icon{
+    &::before{
+        top: 50%;
+        transform: translateY(-50%);
+        background-position: 50%  50%;
+    }
+}
