@@ -18,6 +18,14 @@
     }
 }
 
+.sidemenu-logo a{
+    filter: brightness(1);
+
+    &:hover{
+        filter: brightness(1.1);
+    }
+}
+
 //  サイドメニューを閉じるボタンの調整
 .sidemenu-close-icon{
     top: 15px;
