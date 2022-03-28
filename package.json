@@ -30,6 +30,8 @@
 
   "dependencies": {
     "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "copy-webpack-plugin": "^10.2.4",
+    "write-file-webpack-plugin": "^4.5.1"
   }
 }
