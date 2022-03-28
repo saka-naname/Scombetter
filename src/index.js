@@ -1,1 +1,1 @@
-console.log("Hello World!");
+import "./styles/sidemenu.scss";

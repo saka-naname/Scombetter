@@ -1,0 +1,10 @@
+// サイドメニューの動きを自然にする
+.sidemenu{
+    left: 0px;
+
+    &.sidemenu-close{
+        width: 301px;
+        white-space: normal;
+        left: -301px;
+    }
+}
