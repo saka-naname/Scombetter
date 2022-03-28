@@ -2,7 +2,7 @@
 
 ScombZの見た目をいい感じに整えるChrome拡張機能
 
-この拡張機能はScombZ([https://scombz.shibaura-it.ac.jp/]())上のみで動作します。
+この拡張機能はScombZ([https://scombz.shibaura-it.ac.jp/](https://scombz.shibaura-it.ac.jp/))上のみで動作します。
 
 ## 主な機能
 ### サイドメニュー
