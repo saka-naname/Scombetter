@@ -1,15 +1,7 @@
-# 🚀 Welcome to your new awesome project!
+# Scombetter
 
-This project has been created using **webpack-cli**, you can now run
+ScombZの見た目をいい感じに整えるChrome拡張機能
 
-```
-npm run build
-```
+## 機能
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+## インストール
