@@ -8,3 +8,12 @@
         left: -301px;
     }
 }
+
+// リンクをマウスオーバー時に明るくする
+.sidemenu-link{
+    filter: brightness(1);
+
+    &:hover{
+        filter: brightness(1.05);
+    }
+}
