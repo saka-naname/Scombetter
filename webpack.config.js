@@ -14,6 +14,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  devtool: "cheap-module-source-map", //参考になったページ: https://stackoverflow.com/questions/48047150/chrome-extension-compiled-by-webpack-throws-unsafe-eval-error
   plugins: [
     new CleanWebpackPlugin(),
     new CopyFilePlugin(
