@@ -3,6 +3,7 @@
 const path = require("path");
 const CopyFilePlugin = require("copy-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -14,6 +15,7 @@ const config = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new CopyFilePlugin(
       {
         patterns: [
