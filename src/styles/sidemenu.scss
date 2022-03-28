@@ -17,3 +17,25 @@
         filter: brightness(1.05);
     }
 }
+
+//  サイドメニューを閉じるボタンの調整
+.sidemenu-close-icon{
+    top: 15px;
+    left: 15px;
+    
+    bottom: unset;
+    right: unset;
+
+    width: 28px;
+    height: 28px;
+
+    &::before{
+        content: "✕";
+        font-size: 28px;
+        color: #444;
+    }
+
+    & img{
+        visibility: hidden;
+    }
+}
