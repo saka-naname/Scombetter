@@ -14,7 +14,38 @@ const config = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
-
+    new CopyFilePlugin(
+      {
+        patterns: [
+          {
+            from: "**/*.png",
+            to: "./icons",
+            context: "src/icons"
+          },
+          {
+            from: "**/*",
+            to: "./popup",
+            context: "src/popup"
+          },
+          {
+            from: "**/*.js",
+            to: "./",
+            context: "src",
+            globOptions: {
+              gitignore: false,
+              ignore: [
+                "**/index.js"
+              ]
+            }
+          },
+          {
+            from: "**/*.json",
+            to: "./",
+            context: "src",
+          }
+        ]
+      }
+    ),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
