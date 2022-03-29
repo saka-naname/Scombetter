@@ -1,0 +1,40 @@
+body{
+    width: 360px;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+
+.footer{
+    width: 100%;
+    padding: 1.0em 0;
+    background-color: #eee;
+    color: #444;
+    font-size: smaller;
+    text-align: center;
+}
+
+.setting-item{
+    display: flex;
+    align-items: center;
+}
+
+.setting-item label{
+    margin-left: 4px;
+}
+
+.button-save-container{
+    margin-top: 1.0em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    font-size: small;
+}

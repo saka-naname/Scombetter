@@ -19,5 +19,8 @@
             "css": [],
             "js": ["main.js"]
         }
+    ],
+    "permissions": [
+        "storage"
     ]
 }
