@@ -16,11 +16,15 @@
     "content_scripts": [
         {
             "matches": ["https://scombz.shibaura-it.ac.jp/*"],
-            "css": [],
+            "css": ["css/all.min.css"],
             "js": ["main.js"]
         }
     ],
     "permissions": [
         "storage"
-    ]
+    ],
+    "web_accessible_resources": [{
+        "resources": ["fonts/*.ttf", "fonts/*.woff2"],
+        "matches": ["<all_urls>"]
+    }]
 }

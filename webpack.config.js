@@ -45,6 +45,16 @@ const config = {
             from: "**/*.json",
             to: "./",
             context: "src",
+          },
+          {
+            from: "**/*",
+            to: "./fonts",
+            context: "src/fonts"
+          },
+          {
+            from: "**/all.min.css",
+            to: "./css",
+            context: "src/styles"
           }
         ]
       }
