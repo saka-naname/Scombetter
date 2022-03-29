@@ -4,6 +4,7 @@ const path = require("path");
 const CopyFilePlugin = require("copy-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const webpack = require("webpack");
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -31,7 +32,7 @@ const config = {
             context: "src/popup"
           },
           {
-            from: "**/*.js",
+            from: "*.js",
             to: "./",
             context: "src",
             globOptions: {
@@ -59,6 +60,10 @@ const config = {
         ]
       }
     ),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
