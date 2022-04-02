@@ -1,7 +1,7 @@
 //  初期状態（設定が保存されていない場合に適用される）
 const defaults = {
     settings: {
-        
+        hidePageTopButton: false
     }
 }
 
@@ -10,7 +10,7 @@ function initSettingForm(){
     chrome.storage.local.get(defaults, (items) => {
         for(const key in items.settings){
             const element = document.getElementsByName(key)[0];
-            element.checked = items.settings[key];
+            if(element) element.checked = items.settings[key];
         }
     });
 }
