@@ -1,3 +1,13 @@
-.portal-subblock-infolist-left-item1.portal-subblock-mark-unread-bold + div > a{
-    color: cornflowerblue;
+$color-unread: dodgerblue;
+
+.portal-subblock-infolist-left-item1.portal-subblock-mark-unread-bold{
+    color: $color-unread;
+
+    & + .portal-subblock-infolist-left-item2 > a{
+        color: $color-unread;
+    }
+}
+
+.portal-subblock-infolist-right-item3.portal-subblock-mark-unread-bold{
+    color: $color-unread;
 }
