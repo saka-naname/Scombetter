@@ -1,4 +1,5 @@
 import "./styles/sidemenu.scss";
+import "./styles/portal_home.scss"
 
 //  初期状態（設定が保存されていない場合に適用される）
 const defaults = {
