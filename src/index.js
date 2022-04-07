@@ -13,3 +13,5 @@ chrome.storage.local.get(defaults, (items) => {
         $(".page-top-btn").css("visibility", "hidden");
     }
 });
+
+import "./js/dialogExpander";
