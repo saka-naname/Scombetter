@@ -5,10 +5,13 @@ const CopyFilePlugin = require("copy-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
+const ZipPlugin = require("zip-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = "style-loader";
+
+const packageJson = require("./package.json");
 
 const config = {
   entry: "./src/index.js",
@@ -63,6 +66,9 @@ const config = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
+    }),
+    new ZipPlugin({
+      filename: `scombetter_${packageJson.version}`
     }),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
