@@ -4,6 +4,7 @@ const observer = new MutationObserver((mutations) => {
     const dialog = $("[aria-describedby='infoDetailView']");
     const progressDialog = $("[aria-describedby='progress_dialog']");
     const notificationDialog = $("[aria-describedby='info_detail_view2']");
+    const courseDialog = $("[aria-describedby='info_detail_view']");
 
     //  ポータルホームのダイアログの処理
     if(dialog.length > 0 && progressDialog.length === 0 && dialog.css("display") != "none"){
@@ -17,6 +18,12 @@ const observer = new MutationObserver((mutations) => {
         //  ダイアログが開かれた時のみ処理を実行する
         $("#info_detail_view2").css("max-height", "calc(90vh - 40px)").css("height", "calc(90vh - 40px)");
         notificationDialog.css("position", "fixed").css("inset", "0").css("margin", "auto").css("height", "fit-content");
+    }
+
+    //  LMSの授業詳細ページ＆コミュニティ詳細ページのダイアログの処理
+    if(courseDialog.length > 0 && courseDialog.css("display") != "none"){
+        $("#info_detail_view").css("max-height", "calc(90vh - 40px)").css("height", "calc(90vh - 40px)");
+        courseDialog.css("position", "fixed").css("inset", "0").css("margin", "auto").css("height", "fit-content");
     }
 });
 
