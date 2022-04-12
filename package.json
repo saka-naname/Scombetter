@@ -1,6 +1,6 @@
 {
   "name": "scombetter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chrome Extension",
   "main": "index.js",
   "devDependencies": {
@@ -29,7 +29,6 @@
   },
   "author": "saka-naname",
   "license": "MIT",
-
   "dependencies": {
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
