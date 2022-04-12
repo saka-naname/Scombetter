@@ -1,6 +1,6 @@
 {
   "name": "scombetter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Chrome Extension",
   "main": "index.js",
   "devDependencies": {
