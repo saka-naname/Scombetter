@@ -15,3 +15,4 @@ chrome.storage.local.get(defaults, (items) => {
 });
 
 import "./js/dialogExpander";
+import "./js/timetableExtractor";
