@@ -2,10 +2,11 @@
 const defaults = {
     settings: {
         hidePageTopButton: false
-    }
+    },
+    timetable: []
 }
 
-function initSettingForm(){
+function initPopup(){
     //  チェックボックスに現在の状態を反映し、変更時の保存イベントを登録する
     chrome.storage.local.get(defaults, (items) => {
         for(const key in items.settings){
@@ -28,7 +29,7 @@ function saveSettings(){
     });
 }
 
-initSettingForm();
+initPopup();
 
 document.getElementById("button-save").addEventListener("click", (e) => {
     saveSettings();
