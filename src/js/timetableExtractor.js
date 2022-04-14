@@ -6,10 +6,9 @@ const semesters = {
 }
 
 const lmsPath = "https://scombz.shibaura-it.ac.jp/lms/timetable";
+const currentPath = location.origin + location.pathname;
 
 function extractTimetableOnLMS(){
-    const currentPath = location.origin + location.pathname;
-
     if(lmsPath != currentPath){
         console.error(`extractTimetableOnLMS()は ${lmsPath} を開いている時のみ動作します`);
         return [];
@@ -53,5 +52,11 @@ function parseSubjectCell(tableCell){
     return subject;
 }
 
-console.table(extractTimetableOnLMS());
-console.log(extractTimetableOnLMS()[4][2]);
+if(lmsPath === currentPath){
+    $("#selectTimetable div").first().append(`<input type="button" class="btn btn-txt btn-color btn-right timetable-condition-select-area" id="scombetter_saveTimetable" value="Scombetterに時間割を保存"></input>`);
+    $("#scombetter_saveTimetable").on("click", e => {
+        chrome.storage.local.set({timetable: extractTimetableOnLMS()}, function(){
+            alert("時間割を保存しました！拡張機能アイコンをクリックすると確認できます");
+        });
+    });
+}
