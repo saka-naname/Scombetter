@@ -4,7 +4,7 @@ body{
     margin: 0;
 }
 
-.container{
+.container > *{
     padding: 12px 24px;
     display: flex;
     flex-direction: column;
