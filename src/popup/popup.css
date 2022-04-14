@@ -38,3 +38,32 @@ body{
 button{
     font-size: small;
 }
+
+#timetable tr{
+    border-bottom: 1px gray solid;
+}
+
+#timetable .timetable-data-time{
+    vertical-align: baseline;
+}
+
+#timetable .subject-title{
+    font-weight: bold;
+}
+
+#timetable .time-term{
+    font-size: x-small;
+    color: gray;
+    
+}
+
+#timetable .timetable-data-subject{
+    max-width: 236px;
+    width: 236px;
+}
+
+#timetable .subject-detail{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

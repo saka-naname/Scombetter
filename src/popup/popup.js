@@ -16,6 +16,8 @@ const terms = [
     "20:40~22:00"
 ]
 
+const coursePath = "https://scombz.shibaura-it.ac.jp/lms/course"
+
 function initPopup(){
     chrome.storage.local.get(defaults, (items) => {
         //  チェックボックスに現在の状態を反映し、変更時の保存イベントを登録する
@@ -65,7 +67,7 @@ function renderWeekTimetable(timetable, weekday){
         if(subject){
             let detailDataElement = document.createElement("td");
             detailDataElement.classList = "timetable-data-subject";
-            detailDataElement.innerHTML = `<strong>${subject.title}</strong><div class="subject-detail"><span class="venue">${subject.venue}</span><span>${subject.teacher}</span></div>`
+            detailDataElement.innerHTML = `<div class="subject-title"><a href="${coursePath}?idnumber=${subject.id}" target="_blank" rel="noopener noreferrer">${subject.title}</a></div><div class="subject-detail"><span class="venue">${subject.venue}</span><span>${subject.teacher}</span></div>`
             rowElement.appendChild(detailDataElement);
         }
 
