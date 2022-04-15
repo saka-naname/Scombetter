@@ -57,7 +57,7 @@ function saveSettings(){
     });
 
     chrome.storage.local.set(data, () => {
-        alert("設定を保存しました");
+        
     });
 }
 
@@ -118,6 +118,8 @@ function renderWeekTimetable(timetable, weekday){
 
 initPopup();
 
-document.getElementById("button-save").addEventListener("click", (e) => {
-    saveSettings();
+document.querySelectorAll(".setting-item input").forEach(element => {
+    element.addEventListener("click", (e => {
+        saveSettings();
+    }), false)
 });

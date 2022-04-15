@@ -5,7 +5,8 @@ body{
 }
 
 .container > *{
-    padding: 12px 24px;
+    padding: 6px 0px;
+    margin: 6px 24px;
     display: flex;
     flex-direction: column;
     font-size: small;
@@ -67,8 +68,8 @@ button{
     border-bottom: 1px gray solid;
 }
 
-#timetable tr{
-    border-bottom: 1px gray solid;
+#timetable{
+    border-bottom: 1px lightgray solid;
 }
 
 #timetable .timetable-data-time{
