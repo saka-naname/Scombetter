@@ -15,6 +15,15 @@ const terms = [
     "18:50~20:30"
 ]
 
+const weekdays = [
+    "月",
+    "火",
+    "水",
+    "木",
+    "金",
+    "土"
+]
+
 const coursePath = "https://scombz.shibaura-it.ac.jp/lms/course"
 
 function initPopup(){
@@ -52,6 +61,24 @@ function renderWeekTimetable(timetable, weekday){
     while(target.firstChild){
         target.removeChild(target.firstChild);
     }
+
+    let weekdayTabsContainer = document.createElement("div");
+    weekdayTabsContainer.id = "weekdayTabsContainer";
+    for(let _i = 0; _i < 6; _i++){
+        let weekdayTabElement = document.createElement("span");
+        weekdayTabElement.innerText = weekdays[_i];
+        if( _i === weekday ){
+            weekdayTabElement.classList = "weekday-tab active";
+        }else{
+            weekdayTabElement.classList = "weekday-tab";
+            weekdayTabElement.addEventListener("click", function(e){
+                renderWeekTimetable(timetable, _i);
+            });
+        }
+
+        weekdayTabsContainer.appendChild(weekdayTabElement);
+    }
+    target.appendChild(weekdayTabsContainer);
 
     let timetableElement = document.createElement("table");
     for(let _i = 0; _i < 6; _i++){

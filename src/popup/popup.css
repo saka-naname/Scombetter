@@ -39,6 +39,20 @@ button{
     font-size: small;
 }
 
+#weekdayTabsContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+#weekdayTabsContainer .weekday-tab{
+    width: calc(100% / 6);
+    text-align: center;
+}
+
+#weekdayTabsContainer .weekday-tab.active{
+    font-weight: bold;
+}
+
 #timetable tr{
     border-bottom: 1px gray solid;
 }
