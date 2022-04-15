@@ -43,7 +43,6 @@ function initPopup(){
             if(element) element.checked = items.settings[key];
         }
 
-        console.log(items.timetable, (new Date()).getDay());
         renderWeekTimetable(items.timetable, (new Date()).getDay() - 1);
     });
 }
@@ -69,6 +68,11 @@ function renderWeekTimetable(timetable, weekday){
     let target = document.getElementById("timetable");
     while(target.firstChild){
         target.removeChild(target.firstChild);
+    }
+
+    if(timetable.length === 0){
+        target.innerHTML = "ScombZの時間割を拡張機能に保存するとここに表示されます<ol><li>ScombZにアクセスする</li><li>左サイドメニューの「LMS」をクリックして時間割を表示する</li><li>「Scombetterに時間割を保存」ボタンをクリック</li></ol>";
+        return;
     }
 
     let weekdayTabsContainer = document.createElement("div");
