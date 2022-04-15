@@ -12,8 +12,7 @@ const terms = [
     "13:20~15:00",
     "15:10~16:50",
     "17:00~18:40",
-    "18:50~20:30",
-    "20:40~22:00"
+    "18:50~20:30"
 ]
 
 const coursePath = "https://scombz.shibaura-it.ac.jp/lms/course"
@@ -55,7 +54,7 @@ function renderWeekTimetable(timetable, weekday){
     }
 
     let timetableElement = document.createElement("table");
-    for(let _i = 0; _i < timetable[weekday].length; _i++){
+    for(let _i = 0; _i < 6; _i++){
         let subject = timetable[weekday][_i];
         let rowElement = document.createElement("tr");
 

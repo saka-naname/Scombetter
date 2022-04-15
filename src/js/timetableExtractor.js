@@ -26,7 +26,7 @@ function extractTimetableOnLMS(){
 
     for(let i = 0; i < timetableRows.length; i++){
         let timetableCols = timetableRows[i].querySelectorAll(".div-table-cell");
-        for(let j = 0; j < 6; j++){
+        for(let j = 0; j < 5; j++){
             timetable[j].push(parseSubjectCell(timetableCols[j]));
         }
     }
