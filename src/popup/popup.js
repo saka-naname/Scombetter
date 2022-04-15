@@ -95,6 +95,10 @@ function renderWeekTimetable(timetable, weekday){
             detailDataElement.classList = "timetable-data-subject";
             detailDataElement.innerHTML = `<div class="subject-title"><a href="${coursePath}?idnumber=${subject.id}" target="_blank" rel="noopener noreferrer">${subject.title}</a></div><div class="subject-detail"><span class="venue">${subject.venue}</span><span>${subject.teacher}</span></div>`
             rowElement.appendChild(detailDataElement);
+        }else{
+            let dummyDetailDataElement = document.createElement("td");
+            dummyDetailDataElement.classList = "timetable-data-subject timetable-data-subject-dummy";
+            rowElement.appendChild(dummyDetailDataElement);
         }
 
         timetableElement.appendChild(rowElement);

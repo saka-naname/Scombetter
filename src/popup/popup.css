@@ -42,6 +42,7 @@ button{
 #weekdayTabsContainer{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 0.5em;
 }
 
 #weekdayTabsContainer .weekday-tab{
@@ -51,6 +52,14 @@ button{
 
 #weekdayTabsContainer .weekday-tab.active{
     font-weight: bold;
+    cursor: default;
+    border-bottom: 2px gray solid;
+}
+
+#weekdayTabsContainer .weekday-tab:not(.active){
+    cursor: pointer;
+    color: gray;
+    border-bottom: 1px lightgray solid;
 }
 
 #timetable tr{
@@ -65,6 +74,11 @@ button{
     font-weight: bold;
 }
 
+#timetable .venue{
+    display: inline-block;
+    min-width: 50%;
+}
+
 #timetable .time-term{
     font-size: x-small;
     color: gray;
@@ -74,6 +88,11 @@ button{
 #timetable .timetable-data-subject{
     max-width: 236px;
     width: 236px;
+    line-height: 20px;
+}
+
+#timetable .timetable-data-subject-dummy{
+    height: 40px;
 }
 
 #timetable .subject-detail{
