@@ -4,19 +4,19 @@
   "description": "Chrome Extension",
   "main": "index.js",
   "devDependencies": {
-    "@babel/core": "^7.17.8",
+    "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@webpack-cli/generators": "^2.4.2",
     "babel-loader": "^8.2.4",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
-    "prettier": "^2.6.1",
-    "sass": "^1.49.9",
+    "prettier": "^2.6.2",
+    "sass": "^1.50.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "webpack-cli": "^4.9.2",
-    "workbox-webpack-plugin": "^6.5.2",
+    "workbox-webpack-plugin": "^6.5.3",
     "zip-webpack-plugin": "^4.0.1"
   },
   "scripts": {
@@ -29,6 +29,7 @@
   "author": "saka-naname",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.6.4",
     "copy-webpack-plugin": "^10.2.4",
     "jquery": "^3.6.0",
     "webpack": "^5.72.0",
