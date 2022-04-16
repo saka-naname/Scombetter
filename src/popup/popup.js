@@ -62,7 +62,7 @@ function saveSettings(){
 
 function renderWeekTimetable(timetable, weekday){
     if(weekday < 0 || 5 < weekday){
-        renderWeekTimetable(timetable, 0);
+        return renderWeekTimetable(timetable, 0);
     }
 
     let target = document.getElementById("timetable");
