@@ -15,7 +15,6 @@
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "workbox-webpack-plugin": "^6.5.2",
     "zip-webpack-plugin": "^4.0.1"
@@ -30,13 +29,10 @@
   "author": "saka-naname",
   "license": "MIT",
   "dependencies": {
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2",
     "copy-webpack-plugin": "^10.2.4",
     "jquery": "^3.6.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
     "write-file-webpack-plugin": "^4.5.1"
-  },
-  "resolutions": {
-    "glob-parent": "^5.1.2"
   }
 }
