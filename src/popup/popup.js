@@ -99,6 +99,9 @@ function renderWeekTimetable(timetable, weekday){
         let subject = timetable[weekday][_i];
         let rowElement = document.createElement("tr");
         rowElement.classList = "timetable-item";
+        rowElement.addEventListener("click", (e => {
+            renderSubjectInfo(timetable, weekday, _i)
+        }), false);
 
         let timeDataElement = document.createElement("td");
         timeDataElement.classList = "timetable-data-time";
@@ -122,6 +125,60 @@ function renderWeekTimetable(timetable, weekday){
     target.appendChild(timetableElement);
 }
 
+function renderSubjectInfo(timetable, weekday, time){
+    if(weekday < 0 || 5 < weekday || !Number.isInteger(weekday)){
+        throw new RangeError(`weekday(${weekday})は0から5の整数でなければなりません`);
+    }
+
+    if(time < 0 || 5 < time || !Number.isInteger(time)){
+        throw new RangeError(`time(${time})は0から5の整数でなければなりません`);
+    }
+
+    let target = document.getElementById("timetable");
+    while(target.firstChild){
+        target.removeChild(target.firstChild);
+    }
+
+    let subjectInfoElement = document.createElement("div");
+
+    let subjectTopbarElement = document.createElement("div");
+    subjectTopbarElement.classList = "subject-info-topbar";
+    subjectTopbarElement.innerText = `${weekdays[weekday]}曜日 ${time+1}限`;
+    subjectInfoElement.appendChild(subjectTopbarElement);
+
+    if(timetable[weekday][time]){
+        let subjectTitleElement = document.createElement("h1");
+        subjectTitleElement.classList = "subject-info-title";
+        subjectTitleElement.innerText = timetable[weekday][time].title;
+
+        let subjectTeacherElement = document.createElement("p");
+        subjectTeacherElement.classList = "subject-info-teacher";
+        subjectTeacherElement.innerHTML = `<i class="fa-solid fa-user-tie"></i> ${escapeHtml(timetable[weekday][time].teacher)}`;
+
+        let subjectVenueElement = document.createElement("p");
+        subjectVenueElement.classList = "subject-info-venue";
+        subjectVenueElement.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${escapeHtml(timetable[weekday][time].venue)}`;
+
+        subjectInfoElement.appendChild(subjectTitleElement);
+        subjectInfoElement.appendChild(subjectTeacherElement);
+        subjectInfoElement.appendChild(subjectVenueElement);
+    }else{
+        let subjectTitleElement = document.createElement("h1");
+        subjectTitleElement.classList = "subject-info-title empty";
+        subjectTitleElement.innerText = "空きコマ";
+
+        let subjectEmptyMessageElement = document.createElement("p");
+        subjectEmptyMessageElement.classList = "subject-info-empty-message";
+        subjectEmptyMessageElement.innerText = "この時間には授業が入っていないようです。"
+
+        subjectInfoElement.appendChild(subjectTitleElement);
+        subjectInfoElement.appendChild(subjectEmptyMessageElement);
+    }
+
+    target.appendChild(subjectInfoElement);
+}
+
+//  ---------------------------------------------------------------------------------------------
 initPopup();
 
 document.querySelectorAll(".setting-item input").forEach(element => {

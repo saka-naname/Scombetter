@@ -133,3 +133,24 @@ ol#timetableTutorial{
     text-overflow: ellipsis;
     cursor: default;
 }
+
+.subject-info-topbar{
+    height: 22px;
+    padding: 6px;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subject-info-title{
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-block: 10px;
+    margin-inline: 0;
+}
+
+.subject-info-teacher, .subject-info-venue{
+    margin-block: 0.5em;
+}
