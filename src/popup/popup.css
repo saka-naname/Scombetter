@@ -1,3 +1,7 @@
+:root{
+    --color-link: dodgerblue;
+}
+
 body{
     width: 360px;
     padding: 0;
@@ -76,12 +80,30 @@ ol#timetableTutorial{
     border-bottom: 1px lightgray solid;
 }
 
+#timetable table{
+    border: none;
+    border-spacing: 0px;
+}
+
+#timetable .timetable-item:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
 #timetable .timetable-data-time{
     vertical-align: baseline;
 }
 
 #timetable .subject-title{
     font-weight: bold;
+}
+
+#timetable .subject-title a{
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+#timetable .subject-title a:hover{
+    text-decoration: underline;
 }
 
 #timetable .venue{
@@ -109,4 +131,5 @@ ol#timetableTutorial{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    cursor: default;
 }

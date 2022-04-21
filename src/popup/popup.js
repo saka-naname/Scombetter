@@ -94,9 +94,11 @@ function renderWeekTimetable(timetable, weekday){
     target.appendChild(weekdayTabsContainer);
 
     let timetableElement = document.createElement("table");
+    timetableElement.classList = "timetable";
     for(let _i = 0; _i < 6; _i++){
         let subject = timetable[weekday][_i];
         let rowElement = document.createElement("tr");
+        rowElement.classList = "timetable-item";
 
         let timeDataElement = document.createElement("td");
         timeDataElement.classList = "timetable-data-time";
@@ -106,7 +108,7 @@ function renderWeekTimetable(timetable, weekday){
         if(subject){
             let detailDataElement = document.createElement("td");
             detailDataElement.classList = "timetable-data-subject";
-            detailDataElement.innerHTML = `<div class="subject-title"><a href="${coursePath}?idnumber=${escapeHtml(subject.id)}" target="_blank" rel="noopener noreferrer">${escapeHtml(subject.title)}</a></div><div class="subject-detail"><span class="venue">${escapeHtml(subject.venue)}</span><span>${escapeHtml(subject.teacher)}</span></div>`
+            detailDataElement.innerHTML = `<div class="subject-title"><a href="${coursePath}?idnumber=${escapeHtml(subject.id)}" target="_blank" rel="noopener noreferrer">${escapeHtml(subject.title)}</a></div><div class="subject-detail"><span class="venue">${escapeHtml(subject.venue)}</span><span class="teacher">${escapeHtml(subject.teacher)}</span></div>`
             rowElement.appendChild(detailDataElement);
         }else{
             let dummyDetailDataElement = document.createElement("td");
