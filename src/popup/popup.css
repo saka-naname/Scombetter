@@ -68,6 +68,10 @@ button{
     border-bottom: 1px gray solid;
 }
 
+ol#timetableTutorial{
+    padding-inline-start: 14px;
+}
+
 #timetable{
     border-bottom: 1px lightgray solid;
 }

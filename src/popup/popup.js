@@ -71,7 +71,7 @@ function renderWeekTimetable(timetable, weekday){
     }
 
     if(timetable.length === 0){
-        target.innerHTML = "ScombZの時間割を拡張機能に保存するとここに表示されます<ol><li>ScombZにアクセスする</li><li>左サイドメニューの「LMS」をクリックして時間割を表示する</li><li>「Scombetterに時間割を保存」ボタンをクリック</li></ol>";
+        target.innerHTML = "ScombZの時間割を拡張機能に保存するとここに表示されます<ol id='timetableTutorial'><li><a href='https://scombz.shibaura-it.ac.jp/lms/timetable' target='_blank' rel='noopener noreferrer'>ScombZの時間割を開く（新しいタブが開きます）</a></li><li>「Scombetterに時間割を保存」ボタンをクリック</li></ol>";
         return;
     }
 
